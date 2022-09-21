@@ -5,7 +5,7 @@
     <h1 class="hero-title">{{hero.banner_title}}</h1>
     <p class="hero-description false" [ngClass]="{'about-desc': page === 'About'}">
       {{hero.banner_description}}</p>
-    <a *ngIf="page !== 'Blog'" aria-current="page" href="{{hero.call_to_action.url}}"
+    <a *ngIf="page !== 'Blog'" aria-current="page" href="{{hero.call_to_action}}"
       class="btn tertiary-btn">{{hero.call_to_action.title}}</a>
   </div>
   <img *ngIf="page !== 'Blog' && hero.banner_image" alt="{{hero.banner_image.title}}" src="{{hero.banner_image.url}}">
