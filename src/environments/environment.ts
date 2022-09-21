@@ -4,9 +4,9 @@ export const environment = {
 };
 
 export const Config = {
-  api_key: '',
-  delivery_token: '',
-  environment: '',
-  region: '',
-  api_host: ''
+  api_key: 'bltcce2b93a0383a5ba',
+  delivery_token: 'cs9790ca9517b091d937c98993',
+  environment: 'development',
+  region: 'eu',
+  api_host: 'eu-api.contentstack.com'
 };
