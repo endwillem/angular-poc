@@ -336,6 +336,10 @@ footer a {
   flex-wrap: wrap;
 }
 
+.hero-banner img{
+  max-height: 600px;
+}
+
 .hero-content, .home-content {
   text-align: left;
   margin-top: 65px;
