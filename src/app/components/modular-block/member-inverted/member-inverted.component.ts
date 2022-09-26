@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-hero-inverted',
-  templateUrl: './hero-inverted.component.html',
+  selector: 'member-section-inverted',
+  templateUrl: './member-inverted.component.html',
   styleUrls: []
 })
-export class HeroInvertedComponent implements OnInit {
+export class MemberInvertedComponent implements OnInit {
   constructor() { }
   @Input() hero: any;
   @Input() page: string;

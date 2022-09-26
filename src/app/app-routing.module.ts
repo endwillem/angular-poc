@@ -17,6 +17,7 @@ const routes: Routes = [
         component: ArticleComponent,
       }]
   },
+  { path: 'members', component: HomeComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'contact-us', component: ContactComponent },
   { path: '**', component: ErrorComponent }

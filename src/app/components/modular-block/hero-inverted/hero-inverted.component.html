@@ -1,7 +1,7 @@
 <div *ngIf="(hero | json) != '{}'" [ngClass]="(page === 'Blog')?'blog-page-banner':'hero-banner'"
       style="background: {{hero.bg_color}}">
   
-  <img *ngIf="page !== 'Blog' && hero.banner_image" alt="{{hero.banner_image.title}}" src="{{hero.banner_image.url}}">
+  <img *ngIf="page !== 'Blog' && hero.file" alt="{{hero.file.title}}" src="{{hero.file.url}}">
 
   <div [ngClass]="{'about-content': page === 'About', 'blog-page-content': page === 'Blog', 'home-content': page === 'Home' }">
     <h1 class="hero-title" style="color: {{hero.text_color}};">{{hero.banner_title}}</h1>

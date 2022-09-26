@@ -13,6 +13,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ArticleComponent } from './components/article/article.component';
 import { RenderComponent } from './components/render-components/render.components';
 import { HeroComponent } from './components/modular-block/hero/hero.component';
+import { HeroInvertedComponent } from './components/modular-block/hero-inverted/hero-inverted.component';
+import { MemberComponent } from './components/modular-block/member/member.component';
+import { MemberInvertedComponent } from './components/modular-block/member-inverted/member-inverted.component';
 import { ContentComponent } from './components/modular-block/content/content.component';
 import { BucketsComponent } from './components/modular-block/buckets/buckets.component';
 import { FromBlogComponent } from './components/modular-block/blog/blog.component';
@@ -38,6 +41,9 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     ArticleComponent,
     RenderComponent,
     HeroComponent,
+    HeroInvertedComponent,
+    MemberComponent,
+    MemberInvertedComponent,
     ContentComponent,
     BucketsComponent,
     FromBlogComponent,
