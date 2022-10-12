@@ -49,7 +49,6 @@ export class MemberComponent implements OnInit {
           this.memberComponent = entry[0][this.iteration];
           console.log(this.memberComponent = entry[0][this.iteration]);
 
-          Utils.jsonToHtml({ entry: result.all_product.items, paths: ["rte_fieldUid"], renderOption})
 
         }
       }

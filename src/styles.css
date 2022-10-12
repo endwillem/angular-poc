@@ -336,6 +336,10 @@ footer a {
   flex-wrap: wrap;
 }
 
+.hero-banner.member {
+  background: #fff;
+}
+
 .hero-banner img{
   max-height: 600px;
 }
