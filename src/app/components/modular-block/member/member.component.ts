@@ -13,6 +13,7 @@ export class MemberComponent implements OnInit {
   constructor(private cs: ContentstackQueryService, private store: Store) { }
 
   @Input() member_reference: any;
+  @Input() iteration: any;
   @Input() page: string;
 
   memberComponent: any = {};
@@ -41,16 +42,25 @@ export class MemberComponent implements OnInit {
 
   getEntry() {
 
-    this.cs.getEntry(this.member_reference, []).then(entry => {
-      console.log(entry);
-      this.memberComponent = entry[0];
-      const jsonData = this.filterObject(entry[0][0]);
+    this.cs.getEntry(this.member_reference.reference[0]._content_type_uid).then(entry => {
+
+      for(let i=0; i < entry[0].length; i++) {
+        if (entry[0][this.iteration].uid === entry[0][i].uid ){
+          this.memberComponent = entry[0][this.iteration];
+          console.log(this.memberComponent = entry[0][this.iteration]);
+
+          Utils.jsonToHtml({ entry: result.all_product.items, paths: ["rte_fieldUid"], renderOption})
+
+        }
+      }
     }, err => {
       console.log(err, 'err');
     });
   }
-  
-  ngOnInit(): void { 
+
+  ngOnInit(): void {
+
+
     this.getEntry();
 
   }

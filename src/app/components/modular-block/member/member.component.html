@@ -1,12 +1,11 @@
-<div *ngFor="let member of memberComponent" class="hero-banner">
- 
+<div class="hero-banner">
   <div class="home-content">
-    <h1 class="hero-title" style="color: #000;">{{member.single_line}}</h1>
+    <h1 class="hero-title" style="color: #000;">{{memberComponent.single_line}}</h1>
     <p class="hero-description false" style="color: #000;" [ngClass]="">
-      {{member.json_rte.children[1].children[0].text}}
+      <!-- {{memberComponent.json_rte.children[1].children[0].text}} -->
     </p>
   </div>
 
-  <img alt="{{member.file.title}}" src="{{member.file.url}}">
+  <img alt="{{memberComponent.file.title}}" src="{{memberComponent.file.url}}">
 
 </div>

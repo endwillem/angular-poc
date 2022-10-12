@@ -12,5 +12,6 @@ export class RenderComponent implements OnInit {
   @Input() contentTypeUid:string;
   @Input() entryUid:string;
   @Input() locale:string;
+
   ngOnInit(): void {}
 }
