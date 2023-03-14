@@ -42,12 +42,16 @@ export class MemberComponent implements OnInit {
 
   getEntry() {
 
-    this.cs.getEntry(this.member_reference.reference[0]._content_type_uid).then(entry => {
+    this.cs.getEntry(
+      this.member_reference.reference[0]._content_type_uid,
+      [],
+      ["rte_test"]).then(entry => {
 
       for(let i=0; i < entry[0].length; i++) {
         if (entry[0][this.iteration].uid === entry[0][i].uid ){
           this.memberComponent = entry[0][this.iteration];
-          console.log(this.memberComponent = entry[0][this.iteration]);
+
+          console.log(this.memberComponent);
 
 
         }
