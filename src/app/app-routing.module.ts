@@ -7,6 +7,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ArticleComponent } from './components/article/article.component';
 import { ErrorComponent } from './components/error/error.component';
+import { FactionsComponent } from './components/factions/factions.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
         component: ArticleComponent,
       }]
   },
-  { path: 'members', component: HomeComponent },
+  { path: 'members', component: AboutComponent },
+  { path: 'factions', component: FactionsComponent },
   { path: 'about-us', component: AboutComponent },
   { path: 'contact-us', component: ContactComponent },
   { path: '**', component: ErrorComponent }
