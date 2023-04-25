@@ -3,25 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ArticleComponent } from './components/article/article.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FactionsComponent } from './components/factions/factions.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'blog/:id', component: ArticleComponent,
-    children: [{
-        path: '**',
-        component: ArticleComponent,
-      }]
-  },
+  { path: 'home', component: HomeComponent },
   { path: 'members', component: AboutComponent },
   { path: 'factions', component: FactionsComponent },
-  { path: 'about-us', component: AboutComponent },
-  { path: 'contact-us', component: ContactComponent },
   { path: '**', component: ErrorComponent }
 ];
 @NgModule({

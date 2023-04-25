@@ -12,9 +12,10 @@ import { actionBlogpost, actionPage } from 'src/app/store/actions/state.actions'
 })
 export class HomeComponent implements OnInit {
   constructor(private cs: ContentstackQueryService, private metaTagService: Meta, private seo: SeoService, private store: Store) { }
-  page = 'Home';
+  page = 'home';
   homeContent: any = {};
   entryUid: string;
+
   filterObject(inputObject) {
     const unWantedProps = [
       "uid",
@@ -36,18 +37,20 @@ export class HomeComponent implements OnInit {
     }
     return inputObject;
   }
+
   getEntry() {
-    this.cs.getEntryWithQuery('page', { key: 'url', value: '/' },
-      ['page_components.from_blog.featured_blogs'],
-      ["page_components.from_blog.featured_blogs.body",
-        "page_components.section_with_buckets.buckets.description",]).then(entry => {
-          this.homeContent = entry[0][0];
-          const jsonData = this.filterObject(entry[0][0])
-          this.store.dispatch(actionPage({ page: jsonData }));
-          this.store.dispatch(actionBlogpost({ blogpost: null }));
-          if (this.homeContent.seo) { this.seo.getSeoField(this.homeContent.seo, this.metaTagService); }
+    this.cs.getEntryWithQuery('page', { key: 'url', value: '/home' },
+      [],
+      []).then(entry => {
+          this.homeContent = entry;
+          console.log(entry);
+          // const jsonData = this.filterObject(entry[0][0])
+          // this.store.dispatch(actionPage({ page: jsonData }));
+          // this.store.dispatch(actionBlogpost({ blogpost: null }));
+          // if (this.homeContent.seo) { this.seo.getSeoField(this.homeContent.seo, this.metaTagService); }
         }, err => {
-          console.log(err);
+
+          console.log('error ', err);
 
         });
 

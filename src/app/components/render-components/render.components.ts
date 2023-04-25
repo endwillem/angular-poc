@@ -18,7 +18,7 @@ export class RenderComponent implements OnInit {
   @Input() iteration: any;
 
   getEntry() {
-    console.log(this);
+    /*
     this.cs.getEntryWithQuery(
       "page",
       { key: "url", value: "/about-us"},
@@ -37,10 +37,11 @@ export class RenderComponent implements OnInit {
       }
     }, err => {
       console.log(err, 'err');
-    });
+    });*/
   }
 
   ngOnInit(): void {
+    console.log(this.pageComponents)
     this.getEntry();
   }
 }
