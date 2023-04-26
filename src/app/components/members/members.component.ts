@@ -7,10 +7,10 @@ import { actionBlogpost, actionPage } from 'src/app/store/actions/state.actions'
 
 @Component({
   selector: 'app-about',
-  templateUrl: './about.component.html',
+  templateUrl: './members.component.html',
   styleUrls: []
 })
-export class AboutComponent implements OnInit {
+export class MembersComponent implements OnInit {
 
   constructor(private cs: ContentstackQueryService, private seo: SeoService, private metaTagService: Meta, private store: Store) { }
   page = 'About';

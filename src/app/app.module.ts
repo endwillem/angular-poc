@@ -7,7 +7,7 @@ import { Config, environment } from '../environments/environment';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
+import { MembersComponent } from './components/members/members.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ArticleComponent } from './components/article/article.component';
@@ -35,7 +35,7 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    AboutComponent,
+    MembersComponent,
     BlogComponent,
     ContactComponent,
     ArticleComponent,
