@@ -43,11 +43,14 @@ export class HomeComponent implements OnInit {
       [],
       []).then(entry => {
           this.homeContent = entry;
-          console.log(entry);
-          // const jsonData = this.filterObject(entry[0][0])
-          // this.store.dispatch(actionPage({ page: jsonData }));
-          // this.store.dispatch(actionBlogpost({ blogpost: null }));
-          // if (this.homeContent.seo) { this.seo.getSeoField(this.homeContent.seo, this.metaTagService); }
+          const jsonData = this.filterObject(entry[0][0])
+          this.store.dispatch(actionPage({ page: jsonData }));
+          this.store.dispatch(actionBlogpost({ blogpost: null }));
+
+          console.log('homeComponent ', entry);
+
+          if (this.homeContent.seo) { this.seo.getSeoField(this.homeContent.seo, this.metaTagService); }
+
         }, err => {
 
           console.log('error ', err);

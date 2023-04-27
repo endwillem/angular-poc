@@ -18,30 +18,11 @@ export class RenderComponent implements OnInit {
   @Input() iteration: any;
 
   getEntry() {
-    /*
-    this.cs.getEntryWithQuery(
-      "page",
-      { key: "url", value: "/about-us"},
-      [
-        "page_components.reference_block.reference",
-        "page_components.reference_block_to_member_inverted.reference"
-      ],
-      [
-        "page_components.reference_block.reference.rte_test",
-        "page_components.reference_block_to_member_inverted.reference.json_rte"
-      ]).then(entry => {
-      for(let i=0; i < entry[0].length; i++) {
-        if (entry[0][this.iteration].uid === entry[0][i].uid ){
-          //this.memberComponent = entry[0][this.iteration];
-        }
-      }
-    }, err => {
-      console.log(err, 'err');
-    });*/
+
   }
 
   ngOnInit(): void {
-    console.log(this.pageComponents)
     this.getEntry();
+    console.log(this.pageComponents);
   }
 }

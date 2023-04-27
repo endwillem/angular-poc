@@ -1,13 +1,14 @@
 <div *ngIf="(hero | json) != '{}'" [ngClass]="(page === 'Blog')?'blog-page-banner':'hero-banner'"
       style="background: {{hero.bg_color}}">
-  
+
   <img *ngIf="page !== 'Blog' && hero.file" alt="{{hero.file.title}}" src="{{hero.file.url}}">
 
   <div [ngClass]="{'about-content': page === 'About', 'blog-page-content': page === 'Blog', 'home-content': page === 'Home' }">
-    <h1 class="hero-title" style="color: {{hero.text_color}};">{{hero.banner_title}}</h1>
-    <p class="hero-description false" style="color: {{hero.text_color}};" [ngClass]="{'about-desc': page === 'About'}">
-      {{hero.banner_description}}
-    </p>
-    
+    <a href="/{{hero.banner_title.toLowerCase()}}">
+      <h1 class="hero-title" style="color: {{hero.text_color}};">{{hero.banner_title}}</h1>
+      <p class="hero-description false" style="color: {{hero.text_color}};" [ngClass]="{'about-desc': page === 'About'}">
+        {{hero.banner_description}}
+      </p>
+    </a>
   </div>
 </div>

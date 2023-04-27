@@ -9,5 +9,8 @@ export class HeroInvertedComponent implements OnInit {
   constructor() { }
   @Input() hero: any;
   @Input() page: string;
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+    console.log(this.hero);
+  }
 }

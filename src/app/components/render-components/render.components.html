@@ -7,13 +7,17 @@
 
       <div *ngIf="component.reference_block">{{component.reference_block.reference[0].title}}</div>
 
+      <app-hero *ngIf="component.hero_banner" [page]=page [hero]=component.hero_banner> </app-hero>
+
+      <app-hero-inverted *ngIf="component.hero_banner_inverted" [page]=page [hero]=component.hero_banner_inverted> </app-hero-inverted>
+
 <!--
     <member-section *ngIf="component.reference_block" [page]=page [member_reference]=component.reference_block> </member-section>
       <member-section-inverted *ngIf="component.reference_block" [page]=page [member_reference]=component.reference_block [iteration]=i> </member-section-inverted>
 
-      <app-hero *ngIf="component.hero_banner" [page]=page [hero]=component.hero_banner> </app-hero>
 
-      <app-hero-inverted *ngIf="component.hero_banner_inverted" [page]=page [hero]=component.hero_banner_inverted> </app-hero-inverted>
+
+
 
       <member-section *ngIf="component.reference_block" [page]=page [member_reference]=component.reference_block [iteration]=i> </member-section>
 
