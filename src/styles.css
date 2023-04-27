@@ -1254,5 +1254,7 @@ app-footer footer {
   width: 50%;
 }
 
-.main .hero-banner img {
+.hero-banner.member {
+  background: black;
+  color: #ccc;
 }

@@ -40,7 +40,6 @@ export class MembersComponent implements OnInit {
     this.cs.getEntryWithQuery('page', { key: 'url', value: '/members' },
     ["page_components.reference_block.reference"],
     []).then(entry => {
-      console.log(entry);
       this.aboutContent = entry[0][0];
       const jsonData = this.filterObject(entry[0][0])
       this.store.dispatch(actionPage({ page: jsonData }));

@@ -39,7 +39,7 @@ export class DecepticonsComponent implements OnInit {
   getEntry() {
     this.cs.getEntryWithQuery('page', { key: 'url', value: '/decepticons' },
     ["page_components.reference_block.reference"],
-    []).then(entry => {
+    ["page_components.reference_block.reference.rte_test"]).then(entry => {
       this.decepticonsContent = entry[0][0];
       const jsonData = this.filterObject(entry[0][0])
       this.store.dispatch(actionPage({ page: jsonData }));
