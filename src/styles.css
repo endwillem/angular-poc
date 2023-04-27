@@ -1197,3 +1197,62 @@ footer a {
 }
 
 /* scroll end */
+body {
+  background: black;
+}
+
+body a {
+  color: #ccc;
+}
+
+body a:hover {
+  color: #ccc;
+}
+header nav li a.active,
+header nav li a:hover {
+  color: #310063;
+
+}
+
+app-header header {
+  background: black;
+}
+
+app-header header .wrapper-logo img {
+  margin-right: 10px;
+}
+
+app-footer footer {
+  background: black;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.main div:nth-child(odd) .hero-banner {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main div:nth-child(odd) img {
+  height: 300px;
+}
+
+.main div:nth-child(even) img {
+  height: 200px;
+}
+
+.main div .hero-banner {
+  align-items: center;
+}
+
+.main .hero-banner div {
+  width: 50%;
+}
+
+.main .hero-banner img {
+}

@@ -11,10 +11,6 @@ import { MembersComponent } from './components/members/members.component';
 import { AutobotsComponent } from './components/autobots/autobots.component';
 import { DecepticonsComponent } from './components/decepticons/decepticons.component';
 
-
-import { BlogComponent } from './components/blog/blog.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { ArticleComponent } from './components/article/article.component';
 import { RenderComponent } from './components/render-components/render.components';
 import { HeroComponent } from './components/modular-block/hero/hero.component';
 import { HeroInvertedComponent } from './components/modular-block/hero-inverted/hero-inverted.component';
@@ -29,8 +25,7 @@ import { TeamComponent } from './components/modular-block/team/team.component';
 import { SanitizeHtmlPipe } from 'src/modules/SanitizeHtmlPipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { StoreModule } from '@ngrx/store';
-import {stateReducer} from './store/reducers/state.reducer';
-import { DevtoolsComponent } from './components/devtools/devtools.component';
+import { stateReducer } from './store/reducers/state.reducer';
 import { NgxJsonViewerModule } from 'ngx-json-viewer';
 
 @NgModule({
@@ -42,9 +37,6 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     MembersComponent,
     AutobotsComponent,
     DecepticonsComponent,
-    BlogComponent,
-    ContactComponent,
-    ArticleComponent,
     RenderComponent,
     HeroComponent,
     HeroInvertedComponent,
@@ -57,7 +49,6 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     EmbedComponent,
     TeamComponent,
     SanitizeHtmlPipe,
-    DevtoolsComponent,
   ],
   imports: [
     BrowserModule,
