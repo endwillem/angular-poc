@@ -1226,7 +1226,7 @@ app-footer footer {
   background: black;
 }
 
-.main {
+.main.home {
   display: flex;
   justify-content: center;
   align-items: center;

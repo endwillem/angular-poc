@@ -17,12 +17,14 @@ export class RenderComponent implements OnInit {
   @Input() locale:string;
   @Input() iteration: any;
 
+  currentLocation = window.location.pathname.split('/')[1];
+
   getEntry() {
 
   }
 
   ngOnInit(): void {
     this.getEntry();
-    console.log(this.pageComponents);
+
   }
 }
