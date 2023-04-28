@@ -24,6 +24,7 @@ export class RenderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this);
     this.getEntry();
 
   }

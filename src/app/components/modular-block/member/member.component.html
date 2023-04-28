@@ -1,13 +1,14 @@
 <div class="hero-banner member">
-  <div class="home-content">
-    <h1 class="hero-title" style="">{{memberComponent.single_line}}</h1>
+    <div class="home-content">
+      <a href="{{memberComponent.url}}">
+        <h1 class="hero-title" style="">{{memberComponent.single_line}}</h1>
+      </a>
 
-    <!--JSON RTE-->
-    <div class="hero-description false" style="" [ngClass]="" [innerHTML]="memberComponent.rte_test">
+      <!--JSON RTE-->
+      <div class="hero-description false" style="" [ngClass]="" [innerHTML]="memberComponent.rte_test">
 
+      </div>
     </div>
-  </div>
 
-  <img alt="{{memberComponent.file.title}}" src="{{memberComponent.file.url}}">
-
+    <img alt="{{memberComponent.file.title}}" src="{{memberComponent.file.url}}">
 </div>

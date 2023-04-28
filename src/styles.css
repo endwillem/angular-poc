@@ -1226,12 +1226,22 @@ app-footer footer {
   background: black;
 }
 
+.main {
+  width:75%;
+  margin-left: 12.5%;
+}
+
 .main.home {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
 }
+
+.main.home > div {
+  width:50%;
+}
+
 
 .main div:nth-child(odd) .hero-banner {
   display: flex;

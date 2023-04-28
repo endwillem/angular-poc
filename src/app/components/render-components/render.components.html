@@ -2,12 +2,11 @@
   <div *ngIf="(pageComponents | json) != '{}'" class="main" attr.data-pageref="{{entryUid}}"
     attr.data-contenttype="{{contentTypeUid}}" attr.data-locale="{{locale}}" [ngClass]="currentLocation">
 
+    <member-section *ngIf="pageComponents.single_reference" [page]=page [member_reference]=pageComponents> </member-section>
+
     <div *ngFor="let component of pageComponents">
 
-
       <app-hero-inverted *ngIf="component.hero_banner_inverted" [page]=page [hero]=component.hero_banner_inverted> </app-hero-inverted>
-
-      <div *ngIf="component.reference_block">{{component.reference_block.reference[0].title}}</div>
 
       <member-section *ngIf="component.reference_block" [page]=page [member_reference]=component.reference_block> </member-section>
 

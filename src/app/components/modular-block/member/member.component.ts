@@ -21,5 +21,6 @@ export class MemberComponent implements OnInit {
     console.log('member loaded: ', this)
 
     this.memberComponent = this.member_reference.reference[0]
+
   }
 }

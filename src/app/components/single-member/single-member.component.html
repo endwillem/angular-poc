@@ -1,0 +1,14 @@
+<div class="hero-banner member">
+  <div class="home-content">
+    <a href="{{member.url}}">
+      <h1 class="hero-title" style="">{{member.single_line}}</h1>
+    </a>
+
+    <!--JSON RTE-->
+    <div class="hero-description false" style="" [ngClass]="" [innerHTML]="member.rte_test">
+
+    </div>
+  </div>
+
+  <img alt="{{member.file.title}}" src="{{member.file.url}}">
+</div>

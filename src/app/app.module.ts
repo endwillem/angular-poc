@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { MembersComponent } from './components/members/members.component';
+import { SingleMemberComponent } from './components/single-member/single-member.component';
 import { AutobotsComponent } from './components/autobots/autobots.component';
 import { DecepticonsComponent } from './components/decepticons/decepticons.component';
 
@@ -35,6 +36,7 @@ import { NgxJsonViewerModule } from 'ngx-json-viewer';
     HeaderComponent,
     HomeComponent,
     MembersComponent,
+    SingleMemberComponent,
     AutobotsComponent,
     DecepticonsComponent,
     RenderComponent,

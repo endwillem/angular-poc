@@ -7,14 +7,14 @@ import { actionBlogpost, actionPage } from 'src/app/store/actions/state.actions'
 
 @Component({
   selector: 'app-about',
-  templateUrl: './members.component.html',
+  templateUrl: './single-member.component.html',
   styleUrls: []
 })
-export class MembersComponent implements OnInit {
+export class SingleMemberComponent implements OnInit {
 
   constructor(private cs: ContentstackQueryService, private seo: SeoService, private metaTagService: Meta, private store: Store) { }
   page = 'About';
-  aboutContent: any = {};
+  member: any = {};
   filterObject(inputObject) {
     const unWantedProps = [
       "uid",
@@ -37,14 +37,17 @@ export class MembersComponent implements OnInit {
     return inputObject;
   }
   getEntry() {
-    this.cs.getEntryWithQuery('page', { key: 'url', value: '/' + window.location.pathname.split('/')[1] },
-    ["page_components.reference_block.reference"],
-    []).then(entry => {
-      this.aboutContent = entry[0][0];
-      const jsonData = this.filterObject(entry[0][0])
+    this.cs.getEntryWithQuery('member', { key: 'url', value: '/' + window.location.pathname.split('/')[1] },
+    [],
+    ["rte_test"]).then(entry => {
+      this.member = entry[0][0];
+      const jsonData = this.filterObject(entry[0][0]);
       this.store.dispatch(actionPage({ page: jsonData }));
       this.store.dispatch(actionBlogpost({ blogpost: null }));
-      if (this.aboutContent.seo) { this.seo.getSeoField(this.aboutContent.seo, this.metaTagService); }
+      this.member.single_reference = true;
+      console.log(this.member);
+
+      if (this.member.seo) { this.seo.getSeoField(this.member.seo, this.metaTagService); }
     }, err => {
       console.log(err, 'err');
     });
